@@ -1,31 +1,40 @@
-# React + TypeScript + Vite
+# E-Note Taking System.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Notion-inspired app that allows users to create notes and organize them in a vertical tree-like structure.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Authentication using one-time password
+- Read from database, create, update and delete notes
+- Read from database, create, update and delete images
+- Read from database, create, update and delete pages
+- Reorder notes using drag-and-drop
+- Change page title
+- Change page cover image
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The app is generated with Vite and uses the following technologies:
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TypeScript
+- DndKit (drag and drop)
+- CSS Modules
+- Supabase (database, authentication, storage)
+- Netlify (hosting)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Running the app
+
+To run the app locally, you need to create a Supabase project and add the following environment variables to your `.env` file:
+
+```
+VITE_SUPABASE_URL=""
+VITE_SUPABASE_API_KEY=""
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# e-note-taking-system
+Then run the following commands:
+
+```
+npm install
+npm run dev
+```
