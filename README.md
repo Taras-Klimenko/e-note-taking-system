@@ -1,4 +1,4 @@
-# E-Note Taking System.
+# E-Note Taking System
 
 Notion-inspired app that allows users to create notes and organize them in a vertical tree-like structure.
 
